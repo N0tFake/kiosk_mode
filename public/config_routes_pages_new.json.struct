@@ -1,0 +1,35 @@
+{
+  "modo": "Lista",
+  "configuracoes": {
+    "reload_config_interval": 300,
+    "transicao_tempo": 300,
+    "retry_max": 5,
+    "retry_interval": 30
+  },
+  "itens": [
+    {
+      "id": 1,
+      "tipo": "powerbi",
+      "src": "link_powerbi",
+      "tempo": 30,
+      "ativo": true,
+      "nome": "Placeholder title"
+    },
+    {
+      "id": 1,
+      "tipo": "video_web",
+      "src": "https://videos.pexels.com/video-files/3209828/3209828-hd_1280_720_25fps.mp4",
+      "tempo": 30,
+      "ativo": true,
+      "nome": "Placeholder title"
+    },
+    {
+      "id": 3,
+      "tipo": "imagem_web",
+      "src": "https://pm1.aminoapps.com/7675/6119c98995a132d1dbbc1081df167c230cec722dr1-440-313v2_hq.jpg",
+      "tempo": 10,
+      "ativo": true,
+      "nome": "Imagem Promocional"
+    }
+  ]
+}
