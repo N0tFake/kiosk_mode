@@ -18,7 +18,7 @@ export const PowerBIMedia = ({ src, id, preloadedElement }) => {
     setHasError(false);
     
     if (preloadedElement && preloadedElement.tagName === 'IFRAME') {
-      console.log('📊 Usando PowerBI precarregado para:', id);
+      console.log('Usando PowerBI precarregado para:', id);
       setIsLoading(false);
       setIsContentReady(true);
       return;
@@ -30,7 +30,7 @@ export const PowerBIMedia = ({ src, id, preloadedElement }) => {
     timeoutRef.current = setTimeout(() => {
       setIsLoading(false);
       setIsContentReady(true);
-      console.log('📊 PowerBI timeout - assumindo carregado:', id);
+      console.log('PowerBI timeout - assumindo carregado:', id);
     }, 8000); // 8 segundos de timeout
 
     return () => {
@@ -41,7 +41,7 @@ export const PowerBIMedia = ({ src, id, preloadedElement }) => {
   }, [src, id, preloadedElement]);
 
   const handleLoad = () => {
-    console.log('📊 PowerBI onLoad disparado:', id);
+    console.log('PowerBI onLoad disparado:', id);
     
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -51,7 +51,7 @@ export const PowerBIMedia = ({ src, id, preloadedElement }) => {
       setIsLoading(false);
       setIsContentReady(true);
       setHasError(false);
-      console.log('📊 PowerBI precarregado pronto:', id);
+      console.log('PowerBI precarregado pronto:', id);
       return;
     }
 
@@ -59,12 +59,12 @@ export const PowerBIMedia = ({ src, id, preloadedElement }) => {
       setIsLoading(false);
       setIsContentReady(true);
       setHasError(false);
-      console.log('📊 PowerBI pronto para exibição:', id);
+      console.log('PowerBI pronto para exibição:', id);
     }, 2000); // 2 segundos após onLoad para estabilizar
   };
 
   const handleError = () => {
-    console.error('❌ Erro ao carregar PowerBI:', src);
+    console.error('Erro ao carregar PowerBI:', src);
     setHasError(true);
     setIsLoading(false);
     setIsContentReady(false);
